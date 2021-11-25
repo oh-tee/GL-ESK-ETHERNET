@@ -213,6 +213,11 @@ void BSP_LED_Toggle(Led_TypeDef Led)
   HAL_GPIO_TogglePin(GPIO_PORT[Led], GPIO_PIN[Led]);
 }
 
+uint32_t BSP_LED_GetState(Led_TypeDef Led)
+{
+	return HAL_GPIO_ReadPin(GPIO_PORT[Led], GPIO_PIN[Led]);
+}
+
 /**
   * @}
   */ 
